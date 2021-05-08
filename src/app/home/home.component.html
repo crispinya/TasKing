@@ -1,0 +1,138 @@
+
+<html>
+    <head>
+  
+    </head>
+  
+    <body>
+      <header>
+        <p>
+          <mat-toolbar color="warn">
+            <span>Inicio</span>
+            <span class="example-spacer"></span>
+          </mat-toolbar>
+        </p>
+      </header>
+  
+      <mat-drawer-container class="example-container">
+        
+        <mat-drawer class="sidebar" mode="side" opened>
+          <!--Contenido barra lateral-->
+          <img class="img-perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIo4tIjenmvQr0sKSreWX2LLixtSg3i-YoEw&usqp=CAU">
+          <div class="username">Nombre usuario</div>
+
+          <section>
+            <div class="example-button-row">
+              <button mat-stroked-button class="sidebar-button" color="warn">Inicio</button>
+            </div>
+
+            <div class="example-button-row">
+                <button mat-stroked-button class="sidebar-button" color="warn">Tareas</button>
+              </div>
+
+              <div class="example-button-row">
+                <button mat-stroked-button class="sidebar-button" color="warn">Grupos</button>
+              </div>
+
+              <div class="example-button-row">
+                <button mat-stroked-button class="sidebar-button" color="warn">Estadísticas</button>
+              </div>
+
+              <div class="example-button-row">
+                <button mat-stroked-button class="sidebar-button" color="warn">Ajustes</button>
+              </div>
+          </section>
+
+        </mat-drawer>
+        <mat-drawer-content>
+
+            <mat-grid-list cols="2" rowHeight="1:0.5">
+                <mat-grid-tile>
+
+                    <mat-card class="card">
+                        <mat-card-header>
+                        <mat-card-title>Mi Perfil</mat-card-title>
+                        <mat-card-subtitle>Accede a tu perfil</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image class = "card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
+                        <mat-card-content>
+                        <p>Contenido</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                        <button mat-button routerLink = "/inicio-sesion" routerLinkActive = "active">Acceder</button>
+                        <button mat-button>Más info</button>
+                        </mat-card-actions>
+                    </mat-card>
+
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+
+                    <mat-card class="card">
+                        <mat-card-header>
+                            <mat-card-title>Grupos</mat-card-title>
+                            <mat-card-subtitle>Accede a tus grupos</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image class = "card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
+                        <mat-card-content>
+                            <p>Contenido</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button routerLink = "/task-list" routerLinkActive = "active">Acceder</button>
+                            <button mat-button>Más info</button>
+                        </mat-card-actions>
+                    </mat-card>
+
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+
+                    <mat-card class="card">
+                        <mat-card-header>
+                            <mat-card-title>Estadísticas</mat-card-title>
+                            <mat-card-subtitle>Accede a tus estadísticas</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image class="card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
+                        <mat-card-content>
+                        <p>Contenido</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button>Acceder</button>
+                            <button mat-button>Más info</button>
+                        </mat-card-actions>
+                    </mat-card>
+
+
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    
+                    <mat-card class="card">
+                        <mat-card-header>
+                            <mat-card-title>Estadísticas</mat-card-title>
+                            <mat-card-subtitle>Accede a tus estadísticas</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image class="card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
+                        <mat-card-content>
+                        <p>Contenido</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button>Acceder</button>
+                            <button mat-button>Más info</button>
+                        </mat-card-actions>
+                    </mat-card>
+
+                </mat-grid-tile>
+
+              </mat-grid-list>
+        
+            </mat-drawer-content>
+        </mat-drawer-container>
+      
+      <router-outlet></router-outlet>
+    </body>
+  
+    <footer>
+  
+    </footer>
+  </html>
