@@ -16,16 +16,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { HomeComponent } from './home/home.component';
 import { TaskListComponent } from './task-list/task-list.component';
-import { RegistroComponent } from './registro/registro.component';
 //import { PerfilComponent } from './perfil/perfil.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import {MatListModule} from '@angular/material/list'; 
-import {AyudaComponent} from './ayuda/ayuda.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSliderModule} from '@angular/material/slider';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { TareaBasicaComponent } from './tarea-basica/tarea-basica.component';
 import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { TareaPersonalizadaComponent } from './tarea-personalizada/tarea-personalizada.component';
@@ -45,9 +42,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     HomeComponent,
     TaskListComponent,
     MainNavComponent,
-    RegistroComponent,
-    AyudaComponent,
-    TareaBasicaComponent,
     CrearTareaComponent,
     TareaPersonalizadaComponent
     //PerfilComponent
