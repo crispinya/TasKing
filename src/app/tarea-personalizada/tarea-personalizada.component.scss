@@ -1,0 +1,94 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  #fontSize {
+    width: 300px;
+}
+
+input[type="checkbox"].ios8-switch {
+    position: absolute;
+    margin: 8px 0 0 16px;    
+}
+input[type="checkbox"].ios8-switch + label {
+    position: relative;
+    padding: 5px 0 0 50px;
+    line-height: 2.0em;
+}
+input[type="checkbox"].ios8-switch + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 40px; /* x*5 */
+    height: 24px; /* x*3 */
+    border-radius: 16px; /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input[type="checkbox"].ios8-switch + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 24px; /* x*3 */
+    height: 24px; /* x*3 */
+    border-radius: 16px; /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input[type="checkbox"].ios8-switch + label:hover:after {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+input[type="checkbox"].ios8-switch:checked + label:after {
+    margin-left: 16px;
+}
+input[type="checkbox"].ios8-switch:checked + label:before {
+    background: #55D069;
+}
+
+.example-button-row{
+  text-align: right;
+  padding-bottom: 2%;
+}
+
+.example-button-row a{
+    margin-right: 8px;
+}
+
+#botonCrear{
+  height: 40px;
+  width: 100px;
+}
+
+.sidebar{
+    text-align: center;
+    height: 100%;
+}
+
+.sidebar-button{
+    width: 100%;
+    margin-bottom: 5%;
+    margin-right: 5px;
+}
+
+.img-perfil{
+    max-width: 25%;
+    max-height: 55%;
+}
+
+.conf{
+    align-items: center;
+}

@@ -1,0 +1,72 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidebar-button{
+  width: 100%;
+  margin-bottom: 5%;
+  margin-right: 5px;
+}
+
+#foto{
+  border-radius: 30px;
+}
+
+#userBox{
+  background-color: #414870;
+  color: #ffffff;
+}
+
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: yellow;
+}
+
+input[type="radio"]:checked ~ label {
+  color: yellow;
+}

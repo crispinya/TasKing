@@ -1,0 +1,92 @@
+<div class="father">
+
+  <mat-sidenav-container
+      class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+      <p><button mat-button (click)="close('toggle button')"><img src="../assets/letra-x.png" alt="menu"></button></p>
+      <!-- -----------------Añadir opciones----------- -->
+
+      <div class="example-button-row">
+        <button mat-stroked-button class="sidebar-button" color="warn">Inicio</button>
+      </div>
+
+      <div class="example-button-row">
+          <button mat-stroked-button class="sidebar-button" color="warn">Tareas</button>
+        </div>
+        
+        <div class="example-button-row">
+          <button mat-stroked-button class="sidebar-button" color="warn">Grupos</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-stroked-button class="sidebar-button" color="warn">Estadísticas</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-stroked-button class="sidebar-button" color="warn">Ajustes</button>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.open()"><img src="../assets/iconoMenu.png" alt="menu"></button></p>
+      <p>Closed due to: {{reason}}</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <h2 id="titlePerfilText">Perfil</h2>
+
+  <div id="userBox">
+    <p>
+      <img id="foto" src="../assets/Juan.jpg" alt="fotoJuan">
+      Juan García
+    </p>
+    <hr>
+  </div>
+
+  <div class="tareas">
+    <h3>Tarea 1</h3>
+    <section class="example-section">
+      <mat-checkbox class="example-margin">Completada</mat-checkbox>
+    </section>
+
+    <form>
+      <p class="clasificacion">
+        <input id="radio1" type="radio" name="estrellas" value="1">
+        <label for="radio1">★</label>
+      </p>
+    </form>
+
+    <hr>
+
+    <h3>Tarea 2</h3>
+    <section class="example-section">
+      <mat-checkbox class="example-margin">Completada</mat-checkbox>
+    </section>
+
+    <form>
+      <p class="clasificacion">
+        <input id="radio1" type="radio" name="estrellas" value="1">
+        <label for="radio1">★</label>
+      </p>
+    </form>
+    <hr>
+
+    <h3>Tarea 3</h3>
+    <section class="example-section">
+      <mat-checkbox class="example-margin">Completada</mat-checkbox>
+    </section>
+
+    <form>
+      <p class="clasificacion">
+        <input id="radio1" type="radio" name="estrellas" value="1">
+        <label for="radio1">★</label>
+      </p>
+    </form>
+    <hr>
+
+  </div>
+
+</div>
+
+
+

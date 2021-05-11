@@ -7,18 +7,8 @@ body{
     margin:0;
 }
 
-mat-card,mat-card-action{
-    background: #F2F3F4;
-}
-
 .card-image{
     max-width: 10%;
-    margin-left: 2%;
-}
-
-.img-perfil{
-    max-width: 25%;
-    max-height: 55%;
 }
 
 
@@ -33,7 +23,6 @@ mat-card,mat-card-action{
     margin-bottom: 5%;
     margin-right: 5px;
 }
-
 .username{
     font-size: 15%;
 }
@@ -54,7 +43,11 @@ mat-card,mat-card-action{
   
   .example-sidenav {
     padding: 20px;
-    align-items: center;
   }
+
+  .img-perfil{
+    max-width: 25%;
+    max-height: 55%;
+}   
   
   

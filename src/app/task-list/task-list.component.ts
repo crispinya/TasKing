@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-task-list',
@@ -12,4 +13,9 @@ export class TaskListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+
+export class SidenavAutosizeExample {
+  showFiller = false;
+  mode = new FormControl('over');
 }

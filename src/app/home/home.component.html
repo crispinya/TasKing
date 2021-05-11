@@ -1,138 +1,141 @@
 
 <html>
-    <head>
-  
-    </head>
-  
-    <body>
-      <header>
-        <p>
-          <mat-toolbar color="warn">
-            <span>Inicio</span>
-            <span class="example-spacer"></span>
-          </mat-toolbar>
-        </p>
-      </header>
-  
-      <mat-drawer-container class="example-container">
-        
-        <mat-drawer class="sidebar" mode="side" opened>
-          <!--Contenido barra lateral-->
-          <img class="img-perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIo4tIjenmvQr0sKSreWX2LLixtSg3i-YoEw&usqp=CAU">
-          <div class="username">Nombre usuario</div>
+
+  <head>
+
+  </head>
+
+  <body>
+
+    <!-- MENU -->
+    <header>
+      <p>
+        <mat-toolbar color="warn" style="border-radius: 5px;background-color: rgb(255, 78, 93);">
+          <button type="button" mat-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>Inicio</span>
+          
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+      </p>
+    </header>
+    
+    <mat-drawer-container class="contenedor">
+
+      <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          
+          <h2>Juan Carlos Martín</h2>
+          <img class="img-perfil" src="https://cdn.pixabay.com/photo/2017/02/23/13/05/profile-2092113_960_720.png">
 
           <section>
             <div class="example-button-row">
-              <button mat-stroked-button class="sidebar-button" color="warn">Inicio</button>
+            <button mat-raised-button routerLink = "/home" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Inicio</button>
             </div>
 
             <div class="example-button-row">
-                <button mat-stroked-button class="sidebar-button" color="warn">Tareas</button>
-              </div>
+              <button mat-raised-button routerLink = "/task-list" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Listado de Tareas</button>
+            </div>
 
-              <div class="example-button-row">
-                <button mat-stroked-button class="sidebar-button" color="warn">Grupos</button>
-              </div>
+            <div class="example-button-row">
+              <button mat-raised-button class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white"  routerLink = "/tarea-basica" routerLinkActive = "active">Grupos</button>
+            </div>
 
-              <div class="example-button-row">
-                <button mat-stroked-button class="sidebar-button" color="warn">Estadísticas</button>
-              </div>
+            <div class="example-button-row">
+              <button mat-raised-button class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Estadísticas</button>
+            </div>
 
-              <div class="example-button-row">
-                <button mat-stroked-button class="sidebar-button" color="warn">Ajustes</button>
-              </div>
+            <div class="example-button-row">
+              <button mat-raised-button routerLink = "/ayuda" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Ajustes</button>
+            </div>
+
+            <div class="example-button-row">
+              <button mat-raised-button routerLink = "/" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Cerrar Sesión</button>
+            </div>
           </section>
 
         </mat-drawer>
-        <mat-drawer-content>
 
-            <mat-grid-list cols="2" rowHeight="1:0.5">
-                <mat-grid-tile>
+        <!--CONTENIDO-->
+        <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+          <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>Listado de Tareas</mat-card-title>
+                <mat-card-subtitle>Accede al listado de tus tareas</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image class = "card-image" src="https://i.pinimg.com/originals/06/e6/4f/06e64f936a783246c1bc4581e8507020.png" alt="">
+              <mat-card-content>
+                <p>Pulsa en Acceder para ver todas tus tareas</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button routerLink = "/task-list" routerLinkActive = "active">Acceder</button>
+                <button mat-button>Más info</button>
+              </mat-card-actions>
+          </mat-card>
 
-                    <mat-card class="card">
-                        <mat-card-header>
-                        <mat-card-title>Mi Perfil</mat-card-title>
-                        <mat-card-subtitle>Accede a tu perfil</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image class = "card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
-                        <mat-card-content>
-                        <p>Contenido</p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                        <button mat-button routerLink = "/inicio-sesion" routerLinkActive = "active">Acceder</button>
-                        <button mat-button>Más info</button>
-                        </mat-card-actions>
-                    </mat-card>
+          <mat-card class="card">
+              <mat-card-header>
+                  <mat-card-title>Mi Perfil</mat-card-title>
+                  <mat-card-subtitle>Accede a tu perfil</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image class = "card-image" src="https://lh3.googleusercontent.com/proxy/1Z54zKt5IXed4UwlgaSDmmZWI5vvx9s5AmQkhi6STIvld_x9NBw461JJmVr6jssWeysMjYFWh91cHpniyO1Tu0tJjzwvAWAOgIP2D-PeYrSJ5KHmz1GSO2M" alt="">
+              <mat-card-content>
+                  <p>Contenido</p>
+              </mat-card-content>
+              <mat-card-actions>
+                  <button mat-button>Acceder</button>
+                  <button mat-button>Más info</button>
+              </mat-card-actions>
+          </mat-card>
 
-                </mat-grid-tile>
+          <mat-card class="card">
+              <mat-card-header>
+                  <mat-card-title>Estadísticas</mat-card-title>
+                  <mat-card-subtitle>Accede a tus estadísticas</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image class="card-image" src="https://image.flaticon.com/icons/png/512/1321/1321907.png" alt="">
+              <mat-card-content>
+              <p>Contenido</p>
+              </mat-card-content>
+              <mat-card-actions>
+                  <button mat-button>Acceder</button>
+                  <button mat-button>Más info</button>
+              </mat-card-actions>
+          </mat-card>
 
-                <mat-grid-tile>
-
-                    <mat-card class="card">
-                        <mat-card-header>
-                            <mat-card-title>Grupos</mat-card-title>
-                            <mat-card-subtitle>Accede a tus grupos</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image class = "card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
-                        <mat-card-content>
-                            <p>Contenido</p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-button routerLink = "/task-list" routerLinkActive = "active">Acceder</button>
-                            <button mat-button>Más info</button>
-                        </mat-card-actions>
-                    </mat-card>
-
-                </mat-grid-tile>
-
-                <mat-grid-tile>
-
-                    <mat-card class="card">
-                        <mat-card-header>
-                            <mat-card-title>Estadísticas</mat-card-title>
-                            <mat-card-subtitle>Accede a tus estadísticas</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image class="card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
-                        <mat-card-content>
-                        <p>Contenido</p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-button>Acceder</button>
-                            <button mat-button>Más info</button>
-                        </mat-card-actions>
-                    </mat-card>
+          <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>Grupos</mat-card-title>
+                <mat-card-subtitle>Accede a tus grupos</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image class="card-image" src="https://www.iconpacks.net/icons/1/free-user-group-icon-296-thumb.png" alt="">
+            <mat-card-content>
+            <p>Contenido</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>Acceder</button>
+                <button mat-button>Más info</button>
+            </mat-card-actions>
+        </mat-card>
 
 
-                </mat-grid-tile>
-
-                <mat-grid-tile>
-                    
-                    <mat-card class="card">
-                        <mat-card-header>
-                            <mat-card-title>Estadísticas</mat-card-title>
-                            <mat-card-subtitle>Accede a tus estadísticas</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image class="card-image" src="https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png" alt="">
-                        <mat-card-content>
-                        <p>Contenido</p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                            <button mat-button>Acceder</button>
-                            <button mat-button>Más info</button>
-                        </mat-card-actions>
-                    </mat-card>
-
-                </mat-grid-tile>
-
-              </mat-grid-list>
-        
-            </mat-drawer-content>
-        </mat-drawer-container>
+        </div>
       
-      <router-outlet></router-outlet>
-    </body>
-  
-    <footer>
-  
-    </footer>
-  </html>
+      </mat-drawer-container>
+
+      <!--
+          <mat-drawer class="sidebar" mode="side" opened>
+          
+          
+
+          </mat-drawer>
+          -->
+          
+    </mat-drawer-container>
+  </body>
+
+  <footer>
+
+  </footer>
+</html>

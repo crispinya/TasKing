@@ -1,0 +1,99 @@
+<header>
+  <p>
+    <mat-toolbar color="warn" style="border-radius: 5px;background-color: rgb(255, 78, 93);">
+      <button type="button" routerLink = "/crear-tarea" routerLinkActive = "active" mat-button>
+        <span class="material-icons">
+          arrow_back
+        </span> 
+      </button>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Tareas básicas</span>
+      
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  </p>
+</header>
+
+<mat-drawer-container class="contenedor">
+
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      
+      <h2>Juan Carlos Martín</h2>
+      <img class="img-perfil" src="https://cdn.pixabay.com/photo/2017/02/23/13/05/profile-2092113_960_720.png">
+
+      <section>
+        <div class="example-button-row">
+        <button mat-raised-button routerLink = "/home" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Inicio</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-raised-button routerLink = "/task-list" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Listado de Tareas</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-raised-button class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white"  routerLink = "/tarea-basica" routerLinkActive = "active">Grupos</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-raised-button class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Estadísticas</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-raised-button routerLink = "/ayuda" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Ajustes</button>
+        </div>
+
+        <div class="example-button-row">
+          <button mat-raised-button routerLink = "/" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Cerrar Sesión</button>
+        </div>
+      </section>
+
+    </mat-drawer>
+
+      <!--CONTENIDO-->
+      <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+
+        <!--Meter icono de ir atras-->
+
+        <form id="form" action="/action_page.php">
+            <input type="search" id="gsearch" name="gsearch" placeholder="Buscar las tareas">
+            <input type="submit">
+        </form>
+
+        <mat-list>
+            <mat-list-item>Fregar los platos</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Sacar la basura</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Barrer el polvo</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Fregar el suelo</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Ordenar</mat-list-item>
+            <mat-divider></mat-divider>
+            <p>
+                <mat-toolbar>
+                </mat-toolbar>
+            </p>
+            <mat-list-item>Lavar la ropa</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Tender la ropa</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Recoger la ropa</mat-list-item>
+            <mat-divider></mat-divider>
+            <p>
+                <mat-toolbar>
+                </mat-toolbar>
+            </p>
+            <mat-list-item>Sacar la basura</mat-list-item>
+            <mat-divider></mat-divider> 
+             
+        </mat-list>
+
+      </div>
+    
+    </mat-drawer-container>
+        
+  </mat-drawer-container>

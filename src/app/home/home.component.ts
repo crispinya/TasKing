@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -12,4 +13,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+
+export class SidenavAutosizeExample {
+  showFiller = false;
+  mode = new FormControl('over');
 }
