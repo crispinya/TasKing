@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TareaPersonalizadaComponent } from './tarea-personalizada.component';
+import { AyudaComponent } from './ayuda.component';
 
-describe('TareaPersonalizadaComponent', () => {
-  let component: TareaPersonalizadaComponent;
-  let fixture: ComponentFixture<TareaPersonalizadaComponent>;
+describe('AyudaComponent', () => {
+  let component: AyudaComponent;
+  let fixture: ComponentFixture<AyudaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TareaPersonalizadaComponent ]
+      declarations: [ AyudaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TareaPersonalizadaComponent);
+    fixture = TestBed.createComponent(AyudaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

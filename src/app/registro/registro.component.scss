@@ -1,0 +1,95 @@
+.father{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#imgLogoApp{
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+#imgTwitter{
+    width: 30px;
+    margin-left: -10px;
+    margin-right: 5px;
+}
+
+#imgGoogle{
+    width: 20px;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+#title{
+  text-align: center;
+  font-size: small;
+  color: #7f898f;
+}
+
+#registerText{
+  text-align: center;
+  margin-left: -190px;
+  color: #464646;
+}
+
+.text{
+  text-align: center;
+}
+
+#login{
+  height: 50px;
+  width: 300px;
+}
+
+.example-button-row{
+  text-align: center;
+}
+
+.example-button-row a{
+    margin-right: 8px;
+}
+
+#twitterButton{
+  width: 145px;
+  margin-right: 9px;
+  border-radius: 5px;
+  background-color: #1ca4f4;
+}
+
+#googleButton{
+  width: 145px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.example-full-width {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+#register{
+    display: block;
+    margin: auto;
+}
+
+#loginOptionsText{
+  color: #9ca6ac;
+  text-align: center;
+  font-size: small;
+}
+
+.register{
+    color: rgb(168, 168, 168);
+}
+
+

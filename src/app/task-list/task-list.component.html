@@ -1,197 +1,25 @@
+
 <html>
-
-  <head>
-
-  </head>
-
-  <body>
-
-    <header>
-      <p>
-        <mat-toolbar color="warn" style="border-radius: 5px;background-color: rgb(255, 78, 93);">
-          <button type="button" routerLink = "/home" routerLinkActive = "active" mat-button>
-            <span class="material-icons">
-              arrow_back
-            </span> 
-          </button>
-          <button type="button" mat-button (click)="drawer.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>Listado de Tareas</span>
-          
-          <span class="example-spacer"></span>
-        </mat-toolbar>
-      </p>
-    </header>
+    <head>
+  
+    </head>
+  
+    <body>
     
-    <mat-drawer-container class="contenedor">
-
-      <mat-drawer-container class="example-container" autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
-          
-          <h2>Juan Carlos Martín</h2>
-          <img class="img-perfil" src="https://cdn.pixabay.com/photo/2017/02/23/13/05/profile-2092113_960_720.png">
-
-          <section>
-            <div class="example-button-row">
-            <button mat-raised-button routerLink = "/home" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Inicio</button>
-            </div>
-
-            <div class="example-button-row">
-              <button mat-raised-button routerLink = "/task-list" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Listado de Tareas</button>
-            </div>
-
-            <div class="example-button-row">
-              <button mat-raised-button class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white"  routerLink = "/tarea-basica" routerLinkActive = "active">Grupos</button>
-            </div>
-
-            <div class="example-button-row">
-              <button mat-raised-button class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Estadísticas</button>
-            </div>
-
-            <div class="example-button-row">
-              <button mat-raised-button routerLink = "/ayuda" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Ajustes</button>
-            </div>
-
-            <div class="example-button-row">
-              <button mat-raised-button routerLink = "/" routerLinkActive = "active" class="sidebar-button" style="background-color: rgb(255, 78, 93); color:white">Cerrar Sesión</button>
-            </div>
-          </section>
-
-        </mat-drawer>
-
-
-        <div>
-          <button mat-raised-button routerLink = "/crear-tarea" routerLinkActive = "active" style="width:100%;background-color: rgb(255, 78, 93);color:white">+ Crear tarea</button>
-        </div>
-
-        <div fxLayout="column wrap" fxLayoutGap="10px" style="height:80vh; padding-top: 5%;overflow-y: auto;">
-          <div>
-            <mat-card class="card" style = "background: linear-gradient(turquoise 75%, white 25%);">
-                <mat-card-header>
-                  <div mat-card-avatar class="user-task1"></div>
-                  <mat-card-title>Poner lavadora</mat-card-title>
-                  <mat-card-subtitle>F.Máxima: Mañana</mat-card-subtitle>
-                  <mat-card-subtitle>General</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content style = "text-align: center; transform: scale(2); height: 100px;">
-                  <div style = "padding-top: 30px;">
-                  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" inline = "true">
-                    <mat-icon>local_laundry_service</mat-icon>
-                  </button>
-                  </div>
-                </mat-card-content>
-                <mat-card-actions style = "text-align: right;">
-                  <button mat-button id="points">+50 ptos</button>
-                  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                    <mat-icon>favorite</mat-icon>
-                  </button>
-                  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                    <mat-icon>bookmark</mat-icon>
-                  </button>
-                  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                    <mat-icon>share</mat-icon>
-                  </button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card class="card" style = " background: linear-gradient(rgb(255, 124, 124) 75%, white 25%);">
-              <mat-card-header>
-                <div mat-card-avatar class="user-task2"></div>
-                <mat-card-title>Barrer el salón</mat-card-title>
-                <mat-card-subtitle>F.Máxima: Jueves 13</mat-card-subtitle>
-                <mat-card-subtitle>Salón</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content style = "text-align: center; transform: scale(2); height: 100px;">
-                <div style = "padding-top: 30px;">
-                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" inline = "true">
-                  <mat-icon>shopping_cart</mat-icon>
-                </button>
-                </div>
-              </mat-card-content>
-              <mat-card-actions style = "text-align: right;">
-                <button mat-button id="points">+150 ptos</button>
-                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                  <mat-icon>favorite</mat-icon>
-                </button>
-                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                  <mat-icon>bookmark</mat-icon>
-                </button>
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                  <mat-icon>share</mat-icon>
-                </button>
-              </mat-card-actions>
-            </mat-card>
-          </div>
-
-          <div>
-            <mat-card class="card" style = " background: linear-gradient(rgb(64, 93, 224) 75%, white 25%);">
-              <mat-card-header>
-                <div mat-card-avatar class="user-task3"></div>
-                <mat-card-title>Fregar el salón</mat-card-title>
-                <mat-card-subtitle>F.Máxima: Viernes 14</mat-card-subtitle>
-                <mat-card-subtitle>Salón</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content style = "text-align: center; transform: scale(2); height: 100px;">
-                <div style = "padding-top: 30px;">
-                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" inline = "true">
-                  <mat-icon>pets</mat-icon>
-                </button>
-                </div>
-              </mat-card-content>
-              <mat-card-actions style = "text-align: right;">
-                <button mat-button id="points">+100 ptos</button>
-                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                  <mat-icon>favorite</mat-icon>
-                </button>
-                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                  <mat-icon>bookmark</mat-icon>
-                </button>
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                  <mat-icon>share</mat-icon>
-                </button>
-              </mat-card-actions>
-            </mat-card>
-
-          <mat-card class="card" style = "background: linear-gradient(rgb(255, 241, 43) 75%, white 25%);">
-            <mat-card-header>
-              <div mat-card-avatar class="user-task4"></div>
-              <mat-card-title>Arreglar reloj</mat-card-title>
-              <mat-card-subtitle>Sin fecha máxima</mat-card-subtitle>
-              <mat-card-subtitle>Cocina</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content style = "text-align: center; transform: scale(2); height: 100px;">
-              <div style = "padding-top: 30px;">
-              <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" inline = "true">
-                <mat-icon>alarm</mat-icon>
-              </button>
-              </div>
-            </mat-card-content>
-            <mat-card-actions style = "text-align: right;">
-              <button mat-button id="points">+200 ptos</button>
-              <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                <mat-icon>favorite</mat-icon>
-              </button>
-              <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                <mat-icon>bookmark</mat-icon>
-              </button>
-              <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                <mat-icon>share</mat-icon>
-              </button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-
-          
-      </div>
+      <header>
+        <p>
+          <mat-toolbar color="warn">
+            <span>Lista de tareas</span>
+            <span class="example-spacer"></span>
+          </mat-toolbar>
+        </p>
+      </header>
       
 
-      </mat-drawer-container>
-          
-    </mat-drawer-container>
-  </body>
 
-  <footer>
-
-  </footer>
-</html>
+    </body>
+  
+    <footer>
+  
+    </footer>
+  </html>

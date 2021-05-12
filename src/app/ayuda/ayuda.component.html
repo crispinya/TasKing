@@ -1,0 +1,78 @@
+
+
+<div class="father">
+     <!-- <img src="" alt="flecha"> -->  
+    <h3 id="title">Ayuda</h3> <!-- meter dos imagenes, llave y usuario----------------------------------- -->
+    <br class = "barra">
+
+
+    <h4 class="text">Tutorial</h4>
+    
+    <iframe  src="https://www.youtube.com/embed/kqYuyACFVkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h4 class="text">Elementos de Ayuda</h4>
+    <br class = "barra">
+
+    <input type='checkbox' class='ios8-switch' id="checkbox-1" >
+    <label for='checkbox-1'>Activar anotaciones</label>
+    <br>
+    <br>
+    <input type='checkbox' class='ios8-switch' id="checkbox-2">
+    <label for='checkbox-2'>Activar consejos</label>
+    <br>
+    <br>
+    <input type='checkbox' class='ios8-switch' id="checkbox-3">
+    <label for='checkbox-3'>Activar configuración simple</label>
+    <br>
+    <br>
+    <input type='checkbox' class='ios8-switch' id="checkbox-4">
+    <label for='checkbox-4'>Activar guías</label>
+    <br>
+    <br>
+    <br class = "barra">
+
+
+    <h5 class="text">Tamaño de fuente</h5>
+
+    <mat-slider 
+        id="fontSize"
+        thumbLabel
+        tickInterval="1"
+        step="1"
+        min="0"
+        max="100"
+        value="11"  
+        aria-label="unit(s)"></mat-slider>
+
+
+    <h5 class="text">Estilo de fuente</h5>
+    <button mat-button [matMenuTriggerFor]="menu">Seleccionar</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Helvetica</button>
+      <button mat-menu-item>Serif</button>
+      <button mat-menu-item>Calibri</button>
+      <button mat-menu-item>ChunkFive</button>
+      <button mat-menu-item>Verona</button>
+      <button mat-menu-item>Quicksand</button>
+      <button mat-menu-item>Abril Fatface</button>
+      <button mat-menu-item>Roboto</button>
+    </mat-menu>
+
+    <br class = "barra">
+
+    <h5 class="text">Contáctanos</h5>
+
+    <div class="example-button-row">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Deja un comentario</mat-label>
+            </mat-form-field>
+        </form>
+        <button id="send" mat-raised-button color="warn" >Enviar</button>
+    </div>
+
+
+</div>
+
+
+

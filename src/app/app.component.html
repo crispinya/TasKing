@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+
+<table> <!-- ver ejemplo en el link: https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=68&codigo=68&inicio=60  -->
+  <thead>
+    <tr>
+        <th scope="col" *ngFor="let titulo of titulos"> <!-- cambiar nombres, en el *ngFor en nuestro caso seria: let coche of coches -->
+            {{titulo}} <!-- titulo de las columnas de la tabla -->
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let fila of filas">
+          <td *ngFor="let key of objectKeys(fila)"><!-- cambiar nombres, objectKeys(fila) es del ejemplo mirar en el link de arriba -->
+            {{fila[key]}} <!-- ejemplo: nosotros deberiamos de poner coche[i], mirar -->
+
+            <!-- pipes con el formato del enunciado para cada uno de los atributos-->
+            {{marca | uppercase}}
+            {{modelo | lowercase}}
+            {{fecha_modelo | date:'YYYY'}}
+            {{fecha_venta | date:'MM-YYYY'}}
+            {{precio | currency:'EUR':'symbol':''}} <!-- no se como poner el formato del precio con la , separador de miles -->
+
+          </td>
+      </tr>
+  </tbody>
+</table>
+
