@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AyudaComponent {
 
   formatLabel(value: number) {
-    // if (value >= 1000) {
-    //   return Math.round(value / 1000) ;
-    // }
+     if (value >= 1000) {
+       return Math.round(value / 1000) ;
+     }
 
     return value;
   }
